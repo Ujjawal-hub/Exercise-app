@@ -4,15 +4,16 @@ Run from the project root:
     .venv\\Scripts\\python -m backend.app.ingest_wger
 
 Safe to run again: every row is an upsert, so there are no duplicates.
-Only the wger tables are written. The form tables (form_guides, form_steps,
-form_mistakes, routines, routine_steps) are never touched here.
+Only the wger tables are written. My tables (form_guides, form_steps,
+form_mistakes, form_images, main_images, routines, routine_steps) and my
+custom exercises (id 1,000,000 and up) are never touched here.
 """
 
 from html.parser import HTMLParser
 
 import httpx
 
-from backend.app.db import create_tables, get_connection
+from backend.app.db import CUSTOM_ID_START, create_tables, get_connection
 
 START_URL = "https://wger.de/api/v2/exerciseinfo/"
 START_PARAMS = {"language": 2, "limit": 100, "offset": 0}
@@ -192,6 +193,15 @@ def main():
 
     print("Downloading from wger...")
     exercises = download_all()
+
+    # Safety check: ids from CUSTOM_ID_START upwards belong to my custom exercises.
+    # If wger ever reaches them, stop BEFORE writing anything instead of overwriting mine.
+    clashing = [e["id"] for e in exercises if (e.get("id") or 0) >= CUSTOM_ID_START]
+    if clashing:
+        raise SystemExit(
+            f"Stopped: wger now uses ids from {CUSTOM_ID_START} upwards {clashing[:5]}. "
+            "Move CUSTOM_ID_START in backend/app/db.py higher first. Nothing was written."
+        )
 
     saved = skipped = no_description = no_images = 0
     conn = get_connection()

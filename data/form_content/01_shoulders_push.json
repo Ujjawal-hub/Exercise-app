@@ -1,0 +1,269 @@
+{
+  "exercises": [
+    {
+      "exercise": "DB Shoulder Press",
+      "wger_id": 567,
+      "reviewed": false,
+      "setup": "Bench with back support, feet flat on the floor, dumbbells you can control for every rep.",
+      "source_name": "Strength Level; We Are The Mighty",
+      "source_url": "https://strengthlevel.com/exercises/dumbbell-shoulder-press",
+      "demo_url": "https://strengthlevel.com/exercises/dumbbell-shoulder-press",
+      "steps": [
+        "Sit with your back against the pad and dumbbells at shoulder height, elbows slightly in front of and under your hands.",
+        "Brace your core.",
+        "Press up until arms are almost straight, without locking the elbows. Pause briefly.",
+        "Lower slowly until upper arms are about parallel to the floor.",
+        "Breathe out as you press, in as you lower."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Arching or leaning back",
+          "fix": "Lighter weight, ribs down, glutes and back on the pad."
+        },
+        {
+          "mistake": "Bouncing at the bottom",
+          "fix": "Lower under control, pause for a beat."
+        },
+        {
+          "mistake": "Hard lockout at the top",
+          "fix": "Stop just short of straight."
+        },
+        {
+          "mistake": "One arm racing ahead",
+          "fix": "Press both arms together; drop weight if they drift apart."
+        }
+      ]
+    },
+    {
+      "exercise": "Arnold Press",
+      "wger_id": 20,
+      "reviewed": false,
+      "setup": "Seated, light-to-moderate dumbbells. This is a rotation exercise, so go lighter than a normal press.",
+      "source_name": "FitnessVolt; Breaking Muscle",
+      "source_url": "https://fitnessvolt.com/arnold-press-mistakes/",
+      "demo_url": "https://fitnessvolt.com/arnold-press-mistakes/",
+      "steps": [
+        "Start with dumbbells at chest height, palms facing you.",
+        "Press up while smoothly rotating palms to face forward.",
+        "Finish just short of lockout.",
+        "Reverse the rotation as you lower back to the start."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Too heavy",
+          "fix": "Drop the weight until the rotation is smooth."
+        },
+        {
+          "mistake": "Leaning back / arching",
+          "fix": "Stay tall, core braced."
+        },
+        {
+          "mistake": "Rotating only the hands",
+          "fix": "Rotate the whole forearm and elbow as one movement."
+        },
+        {
+          "mistake": "Rushing or holding breath",
+          "fix": "Slow tempo, exhale on the press."
+        }
+      ]
+    },
+    {
+      "exercise": "Lateral Raise",
+      "wger_id": 348,
+      "reviewed": false,
+      "setup": "Light dumbbells. Heavy weight turns this into a swing.",
+      "source_name": "Garage Gym Reviews",
+      "source_url": "https://www.garagegymreviews.com/lateral-raises",
+      "demo_url": "https://www.garagegymreviews.com/lateral-raises",
+      "steps": [
+        "Stand tall, dumbbells at your sides, slight constant bend in the elbows.",
+        "Lead with the elbows and raise arms out to the sides to shoulder height.",
+        "Pause briefly at the top.",
+        "Lower slowly, taking about as long as the lift."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Swinging the body",
+          "fix": "Lighter weight, stay still from the hips up."
+        },
+        {
+          "mistake": "Raising above shoulder height",
+          "fix": "Stop at shoulder level."
+        },
+        {
+          "mistake": "Shrugging",
+          "fix": "Keep shoulders down, think elbows out."
+        },
+        {
+          "mistake": "Locking the elbows",
+          "fix": "Keep the slight bend throughout."
+        }
+      ]
+    },
+    {
+      "exercise": "Shrugs",
+      "wger_id": 572,
+      "reviewed": false,
+      "setup": "Dumbbells or barbell at a weight you can lift without jerking.",
+      "source_name": "LIVESTRONG",
+      "source_url": "https://livestrong.com/article/556484-possible-injuries-from-dumbbell-shrugs",
+      "demo_url": "https://livestrong.com/article/556484-possible-injuries-from-dumbbell-shrugs",
+      "steps": [
+        "Stand tall with arms straight at your sides.",
+        "Lift your shoulders straight up toward your ears.",
+        "Pause at the top.",
+        "Lower to a full stretch."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Rolling the shoulders",
+          "fix": "Straight up and down only."
+        },
+        {
+          "mistake": "Too heavy, jerky reps",
+          "fix": "Lower the weight, smooth lift."
+        },
+        {
+          "mistake": "Bending the elbows",
+          "fix": "Arms stay straight, the shoulders do the work."
+        },
+        {
+          "mistake": "Head pushed forward",
+          "fix": "Keep neck neutral."
+        },
+        {
+          "mistake": "Partial reps",
+          "fix": "Full range, up and down."
+        }
+      ]
+    },
+    {
+      "exercise": "Reverse Cable Fly",
+      "wger_id": 1473,
+      "reviewed": false,
+      "setup": "Cable pulleys set at chest-to-shoulder height. Light weight.",
+      "source_name": "StrengthLog; LIVESTRONG",
+      "source_url": "https://www.strengthlog.com/reverse-cable-fly/",
+      "demo_url": "https://www.strengthlog.com/reverse-cable-fly/",
+      "steps": [
+        "Cross the handles (right hand takes the left cable) and stand back with a soft knee bend.",
+        "Pull the handles out and back in a wide T, leading with the elbows.",
+        "Squeeze shoulder blades together at the end.",
+        "Return slowly."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Too heavy",
+          "fix": "Light weight, feel the rear shoulder."
+        },
+        {
+          "mistake": "Shrugging",
+          "fix": "Shoulders down."
+        },
+        {
+          "mistake": "Swinging, rounding or arching",
+          "fix": "Hold a stable torso."
+        },
+        {
+          "mistake": "Locking the elbows",
+          "fix": "Slight bend throughout."
+        }
+      ]
+    },
+    {
+      "exercise": "Push-ups",
+      "wger_id": 1551,
+      "reviewed": false,
+      "setup": "Hands under or just outside the shoulders, on a flat floor.",
+      "source_name": "Outside Online; Breaking Muscle",
+      "source_url": "https://www.outsideonline.com/health/training-performance/common-push-up-mistakes",
+      "demo_url": "https://www.outsideonline.com/health/training-performance/common-push-up-mistakes",
+      "steps": [
+        "Make a straight line from head to heels, neck neutral.",
+        "Keep elbows about 45 degrees from the body.",
+        "Lower until your chest is nearly at the floor (elbows at least 90 degrees).",
+        "Press back up to straight arms."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Sagging hips",
+          "fix": "Squeeze glutes and abs."
+        },
+        {
+          "mistake": "Hips piked up",
+          "fix": "Lower hips into the straight line."
+        },
+        {
+          "mistake": "Elbows flared wide",
+          "fix": "Tuck to about 45 degrees."
+        },
+        {
+          "mistake": "Half reps",
+          "fix": "Chest nearly to the floor."
+        },
+        {
+          "mistake": "Head dropping / hands too far forward",
+          "fix": "Eyes slightly ahead, hands under shoulders."
+        }
+      ]
+    }
+  ],
+  "routines": [
+    {
+      "body_part": "shoulders",
+      "kind": "warmup",
+      "name": "Shoulders warmup",
+      "reviewed": false,
+      "source_name": "Marathon Handbook; Bodybuilding.com; BOXROX",
+      "source_url": "https://marathonhandbook.com/shoulder-warm-up/",
+      "steps": [
+        {
+          "instruction": "Easy cardio such as rowing, bike or brisk walk",
+          "amount": "5-10 minutes"
+        },
+        {
+          "instruction": "Arm circles, both directions",
+          "amount": "10 each direction"
+        },
+        {
+          "instruction": "Band pull-aparts",
+          "amount": "2 sets of 10-15"
+        },
+        {
+          "instruction": "Banded over-and-back",
+          "amount": "10 reps"
+        },
+        {
+          "instruction": "Warm-up set of your first exercise with light weight",
+          "amount": "1-2 sets of 10"
+        }
+      ]
+    },
+    {
+      "body_part": "shoulders",
+      "kind": "cooldown",
+      "name": "Shoulders cooldown",
+      "reviewed": false,
+      "source_name": "WebMD; Kaiser Permanente",
+      "source_url": "https://www.webmd.com/fitness-exercise/features/cm/how-to-stretch-shoulders",
+      "steps": [
+        {
+          "instruction": "Cross-body shoulder stretch",
+          "amount": "30 seconds each side, 2 rounds"
+        },
+        {
+          "instruction": "Doorway chest stretch",
+          "amount": "30 seconds each side, 2 rounds"
+        },
+        {
+          "instruction": "Overhead stretch",
+          "amount": "20-30 seconds"
+        },
+        {
+          "instruction": "Breathe slowly; a mild pull is fine, pain is not",
+          "amount": "throughout"
+        }
+      ]
+    }
+  ]
+}

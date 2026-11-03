@@ -11,6 +11,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DB_PATH = PROJECT_ROOT / "data" / "app.db"
 SCHEMA_PATH = Path(__file__).with_name("schema.sql")
 
+# My own (custom) exercises get ids from here upwards. wger ids stay below it.
+CUSTOM_ID_START = 1_000_000
+
 
 def get_connection():
     """Open the database. Rows can be read by column name, e.g. row["name"]."""
@@ -21,11 +24,45 @@ def get_connection():
     return conn
 
 
+def table_columns(conn, table):
+    """Column names of a table, or an empty set if the table does not exist yet."""
+    rows = conn.execute("SELECT name FROM pragma_table_info(?)", (table,)).fetchall()
+    return {row["name"] for row in rows}
+
+
+def upgrade_old_database(conn):
+    """Bring a database made by an older schema.sql up to date. Safe to run again.
+
+    "CREATE TABLE IF NOT EXISTS" never changes a table that already exists,
+    so new columns must be added here by hand.
+    """
+    # Added in step 3: exercises.source ('wger' or 'custom').
+    columns = table_columns(conn, "exercises")
+    if columns and "source" not in columns:
+        conn.execute(
+            "ALTER TABLE exercises ADD COLUMN source TEXT NOT NULL DEFAULT 'wger' "
+            "CHECK (source IN ('wger', 'custom'))"
+        )
+
+    # Added in step 3: form_guides.name and form_guides.demo_url.
+    # The old form tables were never filled, so the simplest upgrade is to drop
+    # them and let schema.sql create them again. Refuse if they hold any data.
+    columns = table_columns(conn, "form_guides")
+    if columns and "name" not in columns:
+        if conn.execute("SELECT COUNT(*) FROM form_guides").fetchone()[0]:
+            raise RuntimeError("form_guides has data; upgrade it by hand, not by dropping it.")
+        conn.execute("DROP TABLE IF EXISTS form_mistakes")
+        conn.execute("DROP TABLE IF EXISTS form_steps")
+        conn.execute("DROP TABLE form_guides")
+
+
 def create_tables():
-    """Create all tables from schema.sql. Safe to run again."""
+    """Create all tables from schema.sql (upgrading an old database first). Safe to run again."""
     schema = SCHEMA_PATH.read_text(encoding="utf-8")
     conn = get_connection()
     try:
+        upgrade_old_database(conn)
+        conn.commit()
         conn.executescript(schema)
         conn.commit()
     finally:

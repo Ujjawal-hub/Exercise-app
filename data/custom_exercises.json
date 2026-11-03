@@ -1,0 +1,15 @@
+{
+  "exercises": [
+    {
+      "name": "Jump Lunges",
+      "reviewed": false,
+      "category": "Legs",
+      "equipment": ["none (bodyweight exercise)"],
+      "muscles_primary": ["Quads", "Glutes"],
+      "muscles_secondary": ["Hamstrings", "Calves"],
+      "source_name": "NASM Exercise Library - Lunge Jump",
+      "source_url": "https://www.nasm.org/resource-center/exercise-library/lunge-jump",
+      "notes": "NASM lists Primary: Quadriceps, Glutes. Secondary: Hamstrings, Hip Stabilizers, Core Stabilizers, Calf Muscles. Hip and core stabilizers are left out because wger's 15 muscles have no exact match for them. NASM names no equipment; it is a bodyweight move. NASM's page links a YouTube video: https://www.youtube.com/watch?v=_5kDxC0flg0"
+    }
+  ]
+}

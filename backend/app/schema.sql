@@ -22,15 +22,20 @@ CREATE TABLE IF NOT EXISTS equipment (
     name TEXT NOT NULL
 );
 
+-- Holds wger exercises AND my own custom exercises (ones wger does not have).
+--   wger exercises:   id = wger's id (below 1,000,000), source = 'wger'
+--   custom exercises: id = 1,000,000 or more,           source = 'custom'
+-- The big gap means a new wger id can never land on a custom exercise.
 CREATE TABLE IF NOT EXISTS exercises (
-    id             INTEGER PRIMARY KEY,  -- same id as in wger
+    id             INTEGER PRIMARY KEY,
     uuid           TEXT,
     name           TEXT NOT NULL,        -- English name
     description    TEXT,                 -- English description as plain text (can be empty)
     category_id    INTEGER REFERENCES categories(id),
     license_name   TEXT,                 -- e.g. "CC-BY-SA 4"
     license_url    TEXT,
-    license_author TEXT                  -- who wrote it, for the credit line
+    license_author TEXT,                 -- who wrote it, for the credit line
+    source         TEXT NOT NULL DEFAULT 'wger' CHECK (source IN ('wger', 'custom'))
 );
 
 -- Link table: which muscles an exercise works.
@@ -59,16 +64,40 @@ CREATE TABLE IF NOT EXISTS exercise_images (
 );
 
 -- ============================================================
--- Form layer (filled ONLY from data/form_content.json)
+-- Form layer (filled ONLY from my files in data/: form_content/*.json,
+-- custom_exercises.json, form_images/ and main_images/)
 -- The wger ingestion script must never write to these tables.
 -- ============================================================
 
 CREATE TABLE IF NOT EXISTS form_guides (
     id          INTEGER PRIMARY KEY,
     exercise_id INTEGER NOT NULL UNIQUE REFERENCES exercises(id),  -- one guide per exercise
+    name        TEXT NOT NULL UNIQUE,    -- my name for it, e.g. "DB Shoulder Press"
     setup       TEXT NOT NULL,
     source_name TEXT NOT NULL,
-    source_url  TEXT
+    source_url  TEXT,
+    demo_url    TEXT                     -- YouTube video only (can be empty)
+);
+
+-- My form/posture pictures for a guide. position = the number in the file
+-- name (1.png is shown first). It is only the display order, not a step number.
+CREATE TABLE IF NOT EXISTS form_images (
+    id        INTEGER PRIMARY KEY,
+    guide_id  INTEGER NOT NULL REFERENCES form_guides(id) ON DELETE CASCADE,
+    position  INTEGER NOT NULL,
+    file_path TEXT NOT NULL,             -- e.g. "form_images/push-ups/1.png" (inside data/)
+    UNIQUE (guide_id, position)
+);
+
+-- My main pictures for an exercise. When an exercise has rows here, the page
+-- shows these INSTEAD of the wger pictures in exercise_images. Kept in a
+-- separate table so re-running the wger import can never change or remove them.
+CREATE TABLE IF NOT EXISTS main_images (
+    id          INTEGER PRIMARY KEY,
+    exercise_id INTEGER NOT NULL REFERENCES exercises(id),
+    position    INTEGER NOT NULL,
+    file_path   TEXT NOT NULL,           -- e.g. "main_images/push-ups/1.png" (inside data/)
+    UNIQUE (exercise_id, position)
 );
 
 -- One row per step. step_number keeps the order.

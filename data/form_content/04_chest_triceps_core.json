@@ -1,0 +1,359 @@
+{
+  "exercises": [
+    {
+      "exercise": "Incline Bench Press",
+      "wger_id": 538,
+      "reviewed": false,
+      "setup": "Bench at about 30 degrees, feet flat, spotter or safeties set.",
+      "source_name": "FitnessVolt; Myprotein",
+      "source_url": "https://fitnessvolt.com/5876/heres-fix-two-worst-incline-bench-press-mistakes",
+      "demo_url": "https://fitbod.me/exercises/barbell-incline-bench-press",
+      "steps": [
+        "Lie back, shoulder blades pulled together and down, slight arch.",
+        "Grip slightly wider than shoulders, unrack.",
+        "Lower the bar to your upper chest, elbows about 45-60 degrees.",
+        "Press up to straight arms."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Flaring elbows wide",
+          "fix": "Elbows 45-60 degrees from the torso."
+        },
+        {
+          "mistake": "Bench angle too steep",
+          "fix": "Around 30 degrees keeps it a chest exercise."
+        },
+        {
+          "mistake": "Bouncing off the chest",
+          "fix": "Controlled lower, brief pause."
+        },
+        {
+          "mistake": "Butt leaving the bench",
+          "fix": "Keep hips down, feet planted."
+        }
+      ]
+    },
+    {
+      "exercise": "Decline Bench Press",
+      "wger_id": 185,
+      "reviewed": false,
+      "setup": "Secure your legs on the decline bench; use a spotter.",
+      "source_name": "BarBend; Fitbod",
+      "source_url": "https://barbend.com/decline-bench-press",
+      "demo_url": "https://barbend.com/decline-bench-press",
+      "steps": [
+        "Lie back, hands slightly wider than shoulders, unrack.",
+        "Lower the bar to the lower chest with control.",
+        "Press up and slightly back to the start line.",
+        "Keep wrists straight and feet secured."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Bouncing",
+          "fix": "Control the lowering."
+        },
+        {
+          "mistake": "Excessive weight without a spotter",
+          "fix": "Use a spotter."
+        },
+        {
+          "mistake": "Uneven bar path",
+          "fix": "Same path every rep."
+        }
+      ]
+    },
+    {
+      "exercise": "Tricep Pushdown",
+      "wger_id": 1185,
+      "reviewed": false,
+      "setup": "Cable at head height or higher, rope or bar attachment.",
+      "source_name": "BoxLife; Fitbod",
+      "source_url": "https://boxlifemagazine.com/tricep-pushdown/",
+      "demo_url": "https://fitbod.me/exercises/cable-tricep-pushdown",
+      "steps": [
+        "Stand close, elbows pinned to your sides.",
+        "Push down until arms are straight.",
+        "Squeeze triceps briefly.",
+        "Return until forearms are just past 90 degrees."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Elbows swinging forward",
+          "fix": "Pin elbows at your sides."
+        },
+        {
+          "mistake": "Leaning over the weight",
+          "fix": "Stay upright, lighter weight."
+        },
+        {
+          "mistake": "Partial range",
+          "fix": "Full extension, controlled return."
+        }
+      ]
+    },
+    {
+      "exercise": "Dips",
+      "wger_id": 194,
+      "reviewed": false,
+      "setup": "Parallel bars, begin with assisted or shallow dips if new. Skip if shoulders hurt.",
+      "source_name": "BarBend; BullBarFit",
+      "source_url": "https://barbend.com/news/dip-correctly-or-dont-dip-at-all/",
+      "demo_url": "https://barbend.com/news/dip-correctly-or-dont-dip-at-all/",
+      "steps": [
+        "Support yourself with arms straight, chest slightly forward.",
+        "Lower until upper arms are about parallel to the floor.",
+        "Keep elbows tracking back, not flaring.",
+        "Press back up to straight arms."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Going too deep",
+          "fix": "Stop around parallel or where the shoulders feel safe."
+        },
+        {
+          "mistake": "Shoulders rolling forward",
+          "fix": "Keep chest up and shoulders back."
+        },
+        {
+          "mistake": "Swinging",
+          "fix": "Control both directions."
+        }
+      ]
+    },
+    {
+      "exercise": "Plank",
+      "wger_id": 458,
+      "reviewed": false,
+      "setup": "Forearms on the floor, elbows under shoulders.",
+      "source_name": "Good Life Fitness; Experience Life",
+      "source_url": "https://experiencelife.lifetime.life/article/perfect-your-plank-with-these-expert-cues/",
+      "demo_url": "https://fitbod.me/exercises/plank",
+      "steps": [
+        "Make a straight line from head to heels.",
+        "Brace your abs and squeeze your glutes.",
+        "Look down, neck neutral.",
+        "Hold while breathing normally."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Sagging hips",
+          "fix": "Tuck pelvis slightly, squeeze glutes."
+        },
+        {
+          "mistake": "Hips piked high",
+          "fix": "Lower to a straight line."
+        },
+        {
+          "mistake": "Holding the breath",
+          "fix": "Breathe steadily; stop when form breaks."
+        }
+      ]
+    },
+    {
+      "exercise": "Side Plank",
+      "wger_id": 580,
+      "reviewed": false,
+      "setup": "On your forearm, feet stacked or staggered.",
+      "source_name": "Famme; People's Pharmacy",
+      "source_url": "https://famme.no/blogs/trening/side-plank",
+      "demo_url": "https://caliverse.app/exercises/side-plank-1178",
+      "steps": [
+        "Elbow under shoulder, body in a straight line.",
+        "Lift hips until head, hips and feet align.",
+        "Brace abs, hold.",
+        "Switch sides."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Hips dropping",
+          "fix": "Lift and squeeze glutes."
+        },
+        {
+          "mistake": "Rolling forward or back",
+          "fix": "Stack shoulders and hips."
+        },
+        {
+          "mistake": "Shoulder shrugging",
+          "fix": "Push the forearm into the floor."
+        }
+      ]
+    },
+    {
+      "exercise": "Hanging Knee Raise",
+      "wger_id": 978,
+      "reviewed": false,
+      "setup": "Hang from a bar with a firm grip.",
+      "source_name": "Fitwill",
+      "source_url": "https://fitwill.app/exercise/11426/hanging-knee-raise/",
+      "demo_url": "https://fitwill.app/exercise/11426/hanging-knee-raise/",
+      "steps": [
+        "Start with shoulders engaged, no swinging.",
+        "Raise knees toward your chest, tilting the pelvis up.",
+        "Pause.",
+        "Lower slowly with control."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Swinging",
+          "fix": "Pause between reps, control the lower."
+        },
+        {
+          "mistake": "Only lifting thighs with hip flexors",
+          "fix": "Curl the pelvis up."
+        },
+        {
+          "mistake": "Dead-hanging shoulders",
+          "fix": "Keep shoulders slightly active."
+        }
+      ]
+    },
+    {
+      "exercise": "Weighted Decline Sit-up",
+      "wger_id": 591,
+      "reviewed": false,
+      "setup": "Decline bench with feet secured. Start without weight.",
+      "source_name": "Fitbod",
+      "source_url": "https://fitbod.me/exercises/decline-overhead-weighted-sit-up",
+      "demo_url": "https://fitbod.me/exercises/decline-overhead-weighted-sit-up",
+      "steps": [
+        "Lie back with a plate held at the chest.",
+        "Curl up by flexing the abs, not by throwing the arms.",
+        "Stop when the torso is upright.",
+        "Lower slowly."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Pulling on the neck",
+          "fix": "Hold the plate at your chest."
+        },
+        {
+          "mistake": "Using momentum",
+          "fix": "Slow, controlled reps."
+        },
+        {
+          "mistake": "Too much weight too soon",
+          "fix": "Master bodyweight first."
+        }
+      ]
+    },
+    {
+      "exercise": "Bicycle Crunch",
+      "wger_id": 1412,
+      "reviewed": false,
+      "setup": "Lie on your back, lower back pressed to the floor.",
+      "source_name": "Garage Gym Reviews; GymKee",
+      "source_url": "https://garagegymreviews.com/crunches-exercise",
+      "demo_url": "https://gymkee.com/exercises/abs/bicycle-crunch/",
+      "steps": [
+        "Hands lightly behind the head.",
+        "Bring one knee in while rotating the opposite elbow toward it.",
+        "Extend the other leg.",
+        "Alternate slowly."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Pulling on the neck",
+          "fix": "Hands light, lead with the ribs."
+        },
+        {
+          "mistake": "Going too fast",
+          "fix": "Slow, deliberate twists."
+        },
+        {
+          "mistake": "Lower back lifting",
+          "fix": "Keep lower back on the floor."
+        }
+      ]
+    }
+  ],
+  "routines": [
+    {
+      "body_part": "chest",
+      "kind": "warmup",
+      "name": "Chest warmup",
+      "reviewed": false,
+      "source_name": "BoxLife Magazine",
+      "source_url": "https://boxlifemagazine.com/bench-press-warm-up/",
+      "steps": [
+        {
+          "instruction": "Easy cardio",
+          "amount": "5 minutes"
+        },
+        {
+          "instruction": "Arm swings, across and open",
+          "amount": "10-15 reps"
+        },
+        {
+          "instruction": "Push-ups on an incline or the floor",
+          "amount": "1-2 sets of 8-10"
+        },
+        {
+          "instruction": "Light warm-up set of the first press",
+          "amount": "1-2 sets of 10"
+        }
+      ]
+    },
+    {
+      "body_part": "chest",
+      "kind": "cooldown",
+      "name": "Chest cooldown",
+      "reviewed": false,
+      "source_name": "WebMD; Kaiser Permanente",
+      "source_url": "https://www.webmd.com/fitness-exercise/features/cm/how-to-stretch-shoulders",
+      "steps": [
+        {
+          "instruction": "Doorway chest stretch",
+          "amount": "30 seconds each side, 2 rounds"
+        },
+        {
+          "instruction": "Cross-body shoulder stretch",
+          "amount": "30 seconds each side"
+        },
+        {
+          "instruction": "Slow breathing",
+          "amount": "throughout"
+        }
+      ]
+    },
+    {
+      "body_part": "triceps",
+      "kind": "warmup",
+      "name": "Triceps warmup",
+      "reviewed": false,
+      "source_name": "FitnessVolt; Bodybuilding.com",
+      "source_url": "https://fitnessvolt.com/overhead-triceps-stretch/",
+      "steps": [
+        {
+          "instruction": "Arm circles",
+          "amount": "10 each direction"
+        },
+        {
+          "instruction": "Light triceps pushdown or band push-aparts",
+          "amount": "1-2 sets of 12-15"
+        },
+        {
+          "instruction": "Close-grip push-ups on an incline",
+          "amount": "1 set of 8"
+        }
+      ]
+    },
+    {
+      "body_part": "triceps",
+      "kind": "cooldown",
+      "name": "Triceps cooldown",
+      "reviewed": false,
+      "source_name": "FitnessVolt; Julie Lohre",
+      "source_url": "https://fitnessvolt.com/overhead-triceps-stretch/",
+      "steps": [
+        {
+          "instruction": "Overhead triceps stretch",
+          "amount": "30 seconds each arm, 2 rounds"
+        },
+        {
+          "instruction": "Gentle arm shake out",
+          "amount": "20 seconds"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "exercises": [
+    {
+      "exercise": "Romanian Deadlift",
+      "wger_id": 507,
+      "reviewed": false,
+      "setup": "Barbell or dumbbells in front of the thighs, feet hip-width, soft knees.",
+      "source_name": "NASM; Barbell Logic",
+      "source_url": "https://blog.nasm.org/romanian-deadlift-basics",
+      "demo_url": "https://blog.nasm.org/romanian-deadlift-basics",
+      "steps": [
+        "Stand tall, shoulders back, bar at hips.",
+        "Push hips back with only a small knee bend, bar sliding down your thighs.",
+        "Lower until you feel a hamstring stretch, back flat.",
+        "Drive hips forward to stand, squeezing glutes."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Rounding the back",
+          "fix": "Chest up, stop where the spine stays flat."
+        },
+        {
+          "mistake": "Squatting it (too much knee bend)",
+          "fix": "Hinge at the hips, knees nearly fixed."
+        },
+        {
+          "mistake": "Bar drifting away from the legs",
+          "fix": "Keep the bar in contact with your legs."
+        },
+        {
+          "mistake": "Hyperextending at the top",
+          "fix": "Stand tall, do not lean back."
+        }
+      ]
+    },
+    {
+      "exercise": "Jump Squats",
+      "wger_id": 614,
+      "reviewed": false,
+      "setup": "Bodyweight only to start. Soft surface is kinder than concrete.",
+      "source_name": "FitnessVolt; BarBend",
+      "source_url": "https://fitnessvolt.com/barbell-jump-squat-guide/",
+      "demo_url": "https://fitnessvolt.com/barbell-jump-squat-guide/",
+      "steps": [
+        "Start in a squat stance, feet shoulder-width.",
+        "Squat down to a comfortable depth, chest up.",
+        "Explode up and jump.",
+        "Land softly on the mid-foot, bend knees to absorb, go straight into the next rep."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Stiff, loud landing",
+          "fix": "Land quietly with bent knees."
+        },
+        {
+          "mistake": "Knees caving in",
+          "fix": "Push knees out in line with toes."
+        },
+        {
+          "mistake": "Rounding the back",
+          "fix": "Chest up, neutral spine."
+        }
+      ]
+    },
+    {
+      "exercise": "Leg Press",
+      "wger_id": 371,
+      "reviewed": false,
+      "setup": "Seat adjusted so knees can reach about 90 degrees; feet shoulder-width on the plate.",
+      "source_name": "Bodybuilding.com; Seannal",
+      "source_url": "https://bodybuilding.com/content/the-6-biggest-leg-press-mistakes-solved.html",
+      "demo_url": "https://fitbod.me/exercises/leg-press",
+      "steps": [
+        "Sit with back and hips flat against the pad.",
+        "Release the safeties, lower the sled with control.",
+        "Stop at about 90 degrees, hips staying down.",
+        "Press through the whole foot, stopping just short of locking out."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Hips lifting off the pad",
+          "fix": "Shorter range, hips and back stay flat."
+        },
+        {
+          "mistake": "Locking the knees",
+          "fix": "Stop short of straight."
+        },
+        {
+          "mistake": "Knees caving in",
+          "fix": "Knees track in line with toes."
+        },
+        {
+          "mistake": "Going too heavy, short reps",
+          "fix": "Lower weight, full controlled reps."
+        }
+      ]
+    },
+    {
+      "exercise": "Jump Lunges",
+      "wger_id": null,
+      "custom_exercise": "Jump Lunges",
+      "reviewed": false,
+      "setup": "Bodyweight, on a non-slip surface. Master normal lunges first.",
+      "source_name": "Fitbod; HPRC",
+      "source_url": "https://hprc-online.org/physical-fitness/training-performance/foundational-movements-lunges",
+      "demo_url": "https://fitbod.me/exercises/lunge-jump",
+      "steps": [
+        "Start in a lunge, front thigh near parallel.",
+        "Explode up and switch legs in the air.",
+        "Land softly in a lunge on the other leg.",
+        "Keep your chest up and repeat."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Hard landings",
+          "fix": "Soft knees, land quietly."
+        },
+        {
+          "mistake": "Front knee collapsing inward",
+          "fix": "Knee over the middle toes."
+        },
+        {
+          "mistake": "Leaning forward",
+          "fix": "Torso upright."
+        }
+      ]
+    },
+    {
+      "exercise": "Single-Leg Calf Raise",
+      "wger_id": 702,
+      "reviewed": false,
+      "setup": "Balls of your foot on a step, hold a wall for balance.",
+      "source_name": "FitnessVolt; Fitbod",
+      "source_url": "https://exercises.kemitchell.com/sources/Renaissance-Periodization-8-calf-raise-mistakes-and-how-to-fix-them",
+      "demo_url": "https://fitbod.me/exercises/single-leg-standing-calf-raise",
+      "steps": [
+        "Stand on one foot with the heel hanging off the step.",
+        "Lower the heel for a full stretch.",
+        "Rise as high as you can onto the toes.",
+        "Pause at the top, then lower slowly."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Bouncing",
+          "fix": "Pause at the bottom and top."
+        },
+        {
+          "mistake": "Partial range",
+          "fix": "Full stretch to full rise."
+        },
+        {
+          "mistake": "Rolling to the outer foot",
+          "fix": "Press through the big toe."
+        }
+      ]
+    }
+  ],
+  "routines": [
+    {
+      "body_part": "legs",
+      "kind": "warmup",
+      "name": "Legs warmup",
+      "reviewed": false,
+      "source_name": "BarBend; HPRC",
+      "source_url": "https://barbend.com/activate-glutes-warmup/",
+      "steps": [
+        {
+          "instruction": "Easy cardio such as bike or brisk walk",
+          "amount": "5 minutes"
+        },
+        {
+          "instruction": "Bodyweight squats",
+          "amount": "10-15 reps"
+        },
+        {
+          "instruction": "Leg swings, front-back and side-to-side",
+          "amount": "10 each leg"
+        },
+        {
+          "instruction": "Glute bridges",
+          "amount": "2 sets of 12"
+        },
+        {
+          "instruction": "Warm-up set of your first exercise",
+          "amount": "1-2 light sets of 10"
+        }
+      ]
+    },
+    {
+      "body_part": "legs",
+      "kind": "cooldown",
+      "name": "Legs cooldown",
+      "reviewed": false,
+      "source_name": "Duke Health; Kane Footwear",
+      "source_url": "https://hr.duke.edu/wellness/runwalk/training-education/take-time-stretch/",
+      "steps": [
+        {
+          "instruction": "Standing quad stretch",
+          "amount": "30 seconds each side"
+        },
+        {
+          "instruction": "Seated hamstring stretch",
+          "amount": "30 seconds each side"
+        },
+        {
+          "instruction": "Calf stretch against a wall",
+          "amount": "30 seconds each side"
+        },
+        {
+          "instruction": "Figure-4 glute stretch",
+          "amount": "30 seconds each side"
+        }
+      ]
+    }
+  ]
+}

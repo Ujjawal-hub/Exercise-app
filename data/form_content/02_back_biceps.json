@@ -1,0 +1,297 @@
+{
+  "exercises": [
+    {
+      "exercise": "Pull-ups",
+      "wger_id": 475,
+      "reviewed": false,
+      "setup": "Overhand grip a little wider than shoulders, hang from a bar. Also covers skill work: use bands or negatives if you cannot do full reps yet.",
+      "source_name": "Coachway; BullBarFit",
+      "source_url": "https://coachway.io/articles/how-to-do-a-pull-up/",
+      "demo_url": "https://coachway.io/articles/how-to-do-a-pull-up/",
+      "steps": [
+        "Start from a dead hang with shoulders active (pulled slightly down, not shrugged).",
+        "Brace core and legs lightly together.",
+        "Pull your chest toward the bar, driving elbows down and back.",
+        "Chin clears the bar. Pause.",
+        "Lower slowly to full hang. For skill work: slow 3-5 second negatives or banded reps."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Kipping / swinging",
+          "fix": "Stay tight, strict reps, use a band if needed."
+        },
+        {
+          "mistake": "Half reps",
+          "fix": "Full hang to chin over bar."
+        },
+        {
+          "mistake": "Shrugging up to the bar",
+          "fix": "Pull shoulder blades down first."
+        },
+        {
+          "mistake": "Craning the neck",
+          "fix": "Neck neutral, chest to bar."
+        }
+      ]
+    },
+    {
+      "exercise": "Lat Pulldown",
+      "wger_id": 1510,
+      "reviewed": false,
+      "setup": "Adjust the thigh pad so your legs are locked in. Grip slightly wider than shoulders.",
+      "source_name": "BarBend; Garage Gym Reviews",
+      "source_url": "https://barbend.com/Lat-Pulldown/",
+      "demo_url": "https://barbend.com/Lat-Pulldown/",
+      "steps": [
+        "Sit tall, chest up, slight lean back.",
+        "Pull the bar to your upper chest, driving elbows down.",
+        "Squeeze the lats at the bottom.",
+        "Return the bar slowly until arms are straight."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Leaning far back and swinging",
+          "fix": "Lighter weight, small lean only."
+        },
+        {
+          "mistake": "Pulling behind the neck",
+          "fix": "Pull to the front of the chest."
+        },
+        {
+          "mistake": "Using arms only",
+          "fix": "Think elbows to the floor."
+        },
+        {
+          "mistake": "Letting the stack slam",
+          "fix": "Control the return."
+        }
+      ]
+    },
+    {
+      "exercise": "Seated Cable Row",
+      "wger_id": 1117,
+      "reviewed": false,
+      "setup": "Feet on the platform, knees slightly bent, torso tall.",
+      "source_name": "BarBend; FitnessVolt",
+      "source_url": "https://barbend.com/seated-cable-row/",
+      "demo_url": "https://barbend.com/seated-cable-row/",
+      "steps": [
+        "Sit tall with a neutral spine and arms straight.",
+        "Pull the handle to your lower ribs, elbows back.",
+        "Squeeze shoulder blades together. Pause.",
+        "Return slowly to full arm extension without rounding."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Rocking the torso",
+          "fix": "Keep torso still, lighter weight."
+        },
+        {
+          "mistake": "Rounding the lower back",
+          "fix": "Chest up, tall spine."
+        },
+        {
+          "mistake": "Shrugging shoulders",
+          "fix": "Shoulders down, elbows back."
+        },
+        {
+          "mistake": "Short range of motion",
+          "fix": "Full stretch and squeeze."
+        }
+      ]
+    },
+    {
+      "exercise": "Barbell Curl",
+      "wger_id": 91,
+      "reviewed": false,
+      "setup": "Shoulder-width underhand grip, standing, weight you can lift without swinging.",
+      "source_name": "BarBend; FitnessVolt",
+      "source_url": "https://barbend.com/barbell-curl/",
+      "demo_url": "https://barbend.com/barbell-curl/",
+      "steps": [
+        "Stand tall, elbows by your sides.",
+        "Curl the bar up, keeping elbows still.",
+        "Squeeze at the top.",
+        "Lower slowly to straight arms."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Swinging the hips",
+          "fix": "Lighter weight, glutes against a wall if needed."
+        },
+        {
+          "mistake": "Elbows drifting forward",
+          "fix": "Pin elbows to your sides."
+        },
+        {
+          "mistake": "Partial range",
+          "fix": "Full extension to full squeeze."
+        },
+        {
+          "mistake": "Dropping the bar fast",
+          "fix": "Slow 2-3 second lower."
+        }
+      ]
+    },
+    {
+      "exercise": "Wrist Curl",
+      "wger_id": 1771,
+      "reviewed": false,
+      "setup": "Forearms on a bench or thighs, wrists off the edge, light weight.",
+      "source_name": "BarBend; Bodybuilding.com",
+      "source_url": "https://barbend.com/barbell-wrist-curl/",
+      "demo_url": "https://barbend.com/barbell-wrist-curl/",
+      "steps": [
+        "Rest forearms with palms up and wrists past the edge.",
+        "Let the weight roll to your fingertips.",
+        "Curl wrists up, squeeze.",
+        "Lower under control."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Too heavy",
+          "fix": "Light weight, high reps."
+        },
+        {
+          "mistake": "Lifting forearms off the support",
+          "fix": "Keep forearms anchored."
+        },
+        {
+          "mistake": "Bouncing",
+          "fix": "Smooth, controlled reps."
+        }
+      ]
+    },
+    {
+      "exercise": "Back Extension",
+      "wger_id": 1348,
+      "reviewed": false,
+      "setup": "Hip pad just below the hip bones, feet secured.",
+      "source_name": "Standard coaching cues (draft; verify)",
+      "source_url": null,
+      "demo_url": null,
+      "steps": [
+        "Cross arms or hold them at your chest.",
+        "Hinge forward at the hips with a flat back.",
+        "Raise your torso until in line with your legs.",
+        "Squeeze glutes, do not hyperextend. Lower under control."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Swinging up with momentum",
+          "fix": "Slow, controlled reps."
+        },
+        {
+          "mistake": "Overarching at the top",
+          "fix": "Stop at a straight line."
+        },
+        {
+          "mistake": "Rounding the lower back at the bottom",
+          "fix": "Hinge from the hips, spine flat."
+        }
+      ]
+    }
+  ],
+  "routines": [
+    {
+      "body_part": "back",
+      "kind": "warmup",
+      "name": "Back warmup",
+      "reviewed": false,
+      "source_name": "BullBarFit; Breaking Muscle",
+      "source_url": "https://bullbarfit.com/blogs/updates/stop-getting-warm-and-start-getting-ready-a-pull-up-warm-up-that-actually-improves-your-first-set",
+      "steps": [
+        {
+          "instruction": "Easy cardio such as rowing or bike",
+          "amount": "5 minutes"
+        },
+        {
+          "instruction": "Cat-cow",
+          "amount": "10 reps"
+        },
+        {
+          "instruction": "Scapular pull-ups or dead hangs",
+          "amount": "2 sets of 8 / 20 sec"
+        },
+        {
+          "instruction": "Band pull-aparts",
+          "amount": "2 sets of 12-15"
+        },
+        {
+          "instruction": "Warm-up set of your first exercise, light",
+          "amount": "1-2 sets of 10"
+        }
+      ]
+    },
+    {
+      "body_part": "back",
+      "kind": "cooldown",
+      "name": "Back cooldown",
+      "reviewed": false,
+      "source_name": "Fitbod; Kane Footwear",
+      "source_url": "https://fitbod.me/blog/back-flexibility-stretches/",
+      "steps": [
+        {
+          "instruction": "Child's pose",
+          "amount": "30-45 seconds"
+        },
+        {
+          "instruction": "Seated or lying spinal twist",
+          "amount": "30 seconds each side"
+        },
+        {
+          "instruction": "Hanging stretch from a bar",
+          "amount": "20-30 seconds"
+        },
+        {
+          "instruction": "Slow breathing, mild stretch only",
+          "amount": "throughout"
+        }
+      ]
+    },
+    {
+      "body_part": "biceps",
+      "kind": "warmup",
+      "name": "Biceps warmup",
+      "reviewed": false,
+      "source_name": "Bodybuilding.com; Centr",
+      "source_url": "https://centr.com/blogs/thewarmup/barbell-arm-curls-for-old-school-strength",
+      "steps": [
+        {
+          "instruction": "Arm circles",
+          "amount": "10 each direction"
+        },
+        {
+          "instruction": "Wrist circles",
+          "amount": "10 each direction"
+        },
+        {
+          "instruction": "Light curls with an empty bar or light dumbbells",
+          "amount": "1-2 sets of 12-15"
+        }
+      ]
+    },
+    {
+      "body_part": "biceps",
+      "kind": "cooldown",
+      "name": "Biceps cooldown",
+      "reviewed": false,
+      "source_name": "Kettlebell Kings",
+      "source_url": "https://kettlebellkings.com/blogs/default-blog/10-essential-arm-stretches-for-post-workout-recovery",
+      "steps": [
+        {
+          "instruction": "Wall or doorway biceps stretch",
+          "amount": "30 seconds each side"
+        },
+        {
+          "instruction": "Wrist flexor and extensor stretch",
+          "amount": "20-30 seconds each"
+        },
+        {
+          "instruction": "Gentle arm shake out",
+          "amount": "20 seconds"
+        }
+      ]
+    }
+  ]
+}

@@ -76,7 +76,9 @@ CREATE TABLE IF NOT EXISTS form_guides (
     setup       TEXT NOT NULL,
     source_name TEXT NOT NULL,
     source_url  TEXT,
-    demo_url    TEXT                     -- YouTube video only (can be empty)
+    demo_url    TEXT,                    -- YouTube video only (can be empty)
+    -- 1 = I checked this guide against its source, 0 = draft (page shows a notice).
+    reviewed    INTEGER NOT NULL DEFAULT 0 CHECK (reviewed IN (0, 1))
 );
 
 -- My form/posture pictures for a guide. position = the number in the file

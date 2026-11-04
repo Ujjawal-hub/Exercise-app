@@ -55,6 +55,15 @@ def upgrade_old_database(conn):
         conn.execute("DROP TABLE IF EXISTS form_steps")
         conn.execute("DROP TABLE form_guides")
 
+    # Added in step 3 part 2: form_guides.reviewed (0 = draft, 1 = checked by me).
+    # Read the columns again: the block above may have just dropped the table.
+    columns = table_columns(conn, "form_guides")
+    if columns and "reviewed" not in columns:
+        conn.execute(
+            "ALTER TABLE form_guides ADD COLUMN reviewed INTEGER NOT NULL DEFAULT 0 "
+            "CHECK (reviewed IN (0, 1))"
+        )
+
 
 def create_tables():
     """Create all tables from schema.sql (upgrading an old database first). Safe to run again."""

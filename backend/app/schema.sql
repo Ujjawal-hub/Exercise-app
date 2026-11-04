@@ -130,8 +130,14 @@ CREATE TABLE IF NOT EXISTS routines (
     kind        TEXT NOT NULL CHECK (kind IN ('warmup', 'cooldown')),
     name        TEXT NOT NULL,
     source_name TEXT NOT NULL,
-    source_url  TEXT
+    source_url  TEXT,
+    reviewed    INTEGER NOT NULL DEFAULT 0 CHECK (reviewed IN (0, 1))  -- 1 = I checked it
 );
+
+-- One warmup and one cooldown per body part. The loader uses this pair to find
+-- a routine again on the next run (upsert). An index can be added to a table
+-- that already exists, so no upgrade code is needed for it.
+CREATE UNIQUE INDEX IF NOT EXISTS routines_body_part_kind ON routines (body_part, kind);
 
 -- One row per move in a routine. step_number keeps the order.
 CREATE TABLE IF NOT EXISTS routine_steps (

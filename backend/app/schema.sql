@@ -35,7 +35,12 @@ CREATE TABLE IF NOT EXISTS exercises (
     license_name   TEXT,                 -- e.g. "CC-BY-SA 4"
     license_url    TEXT,
     license_author TEXT,                 -- who wrote it, for the credit line
-    source         TEXT NOT NULL DEFAULT 'wger' CHECK (source IN ('wger', 'custom'))
+    source         TEXT NOT NULL DEFAULT 'wger' CHECK (source IN ('wger', 'custom')),
+    -- Only for custom exercises (empty for wger ones, which are credited by the
+    -- license columns above). Filled from data/custom_exercises.json.
+    source_name    TEXT,                 -- where I got the muscles/equipment, e.g. "NASM ..."
+    source_url     TEXT,
+    reviewed       INTEGER CHECK (reviewed IN (0, 1))  -- 1 = I checked it, 0 = draft
 );
 
 -- Link table: which muscles an exercise works.

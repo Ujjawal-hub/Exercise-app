@@ -44,6 +44,18 @@ def upgrade_old_database(conn):
             "CHECK (source IN ('wger', 'custom'))"
         )
 
+    # Added in step 3 part 3: source and reviewed flag for my custom exercises.
+    # Empty (NULL) for the wger exercises that are already there.
+    columns = table_columns(conn, "exercises")
+    if columns and "source_name" not in columns:
+        conn.execute("ALTER TABLE exercises ADD COLUMN source_name TEXT")
+    if columns and "source_url" not in columns:
+        conn.execute("ALTER TABLE exercises ADD COLUMN source_url TEXT")
+    if columns and "reviewed" not in columns:
+        conn.execute(
+            "ALTER TABLE exercises ADD COLUMN reviewed INTEGER CHECK (reviewed IN (0, 1))"
+        )
+
     # Added in step 3: form_guides.name and form_guides.demo_url.
     # The old form tables were never filled, so the simplest upgrade is to drop
     # them and let schema.sql create them again. Refuse if they hold any data.

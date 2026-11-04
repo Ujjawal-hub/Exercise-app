@@ -29,6 +29,8 @@ FORM_IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 MAIN_IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 app.mount("/images/form", StaticFiles(directory=FORM_IMAGES_DIR), name="form_images")
 app.mount("/images/main", StaticFiles(directory=MAIN_IMAGES_DIR), name="main_images")
+# The page's own files: styles.css, app.js, assets/ (hero photo).
+app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
 
 
 # ------------------------------------------------------------

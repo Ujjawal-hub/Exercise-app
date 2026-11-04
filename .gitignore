@@ -3,3 +3,6 @@ __pycache__/
 .venv/
 data/*.db
 data/*.sqlite3
+
+# Reference screenshots of another website: kept locally, not committed
+refrencnce_layout/

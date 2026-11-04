@@ -1,0 +1,606 @@
+/* Rhino — styles.
+   Colours and sizes live in :root, so they are changed in one place. */
+
+:root {
+  --black: #000000;   /* top bar, hero, footer */
+  --hide: #4f555a;    /* rhino slate grey: quiet text, empty picture tiles */
+  --chalk: #f1f2ef;   /* page background: cool gym-chalk white */
+  --ink: #17191b;     /* body text */
+  --cobalt: #2448e8;  /* links, buttons, keyboard focus */
+  --caution: #e2a33a; /* ONLY for "Draft" */
+  --white: #ffffff;
+  --line: #d5d8d4;    /* thin borders on light background */
+
+  --font: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --page: 1200px;     /* widest the content gets */
+  --gutter: 24px;
+  --radius: 10px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;          /* keeps the footer at the bottom on short pages */
+  flex-direction: column;
+  background: var(--chalk);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.55;
+  font-variation-settings: "wdth" 100;
+}
+
+img { display: block; max-width: 100%; }
+
+a { color: var(--cobalt); text-underline-offset: 3px; }
+
+:focus-visible {
+  outline: 3px solid var(--cobalt);
+  outline-offset: 2px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  line-height: 1.05;
+  font-variation-settings: "wdth" 125;
+  font-weight: 850;
+}
+
+p { margin: 0; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px; top: -60px;
+  z-index: 50;
+  padding: 8px 14px;
+  background: var(--white);
+  color: var(--ink);
+}
+.skip-link:focus { top: 8px; }
+
+.wrap {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--black);
+  color: var(--white);
+  --cobalt-on-dark: #8ea2ff;
+}
+.topbar :focus-visible { outline-color: var(--cobalt-on-dark); }
+
+.topbar-inner {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 900;
+  font-variation-settings: "wdth" 125;
+  letter-spacing: 0.01em;
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-toggle { display: none; }
+
+.menu { position: relative; }
+
+.menu-button,
+.nav-toggle {
+  background: none;
+  border: 0;
+  color: var(--white);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 650;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.menu-button::after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  border: 5px solid transparent;
+  border-top-color: currentColor;
+  border-bottom: 0;
+  vertical-align: middle;
+}
+
+.menu-panel {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+.menu.open .menu-panel { display: block; }
+/* Mouse users: open on hover too. Phones have no hover, so they use the click above. */
+@media (hover: hover) and (min-width: 761px) {
+  .menu:hover .menu-panel { display: block; }
+}
+
+.menu-panel a {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 18px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.menu-panel a:hover,
+.menu-panel a:focus-visible { background: var(--chalk); }
+.menu-count { color: var(--hide); font-size: 14px; }
+
+.search { position: relative; margin-left: 12px; }
+.search input {
+  width: 260px;
+  padding: 10px 14px;
+  border: 1px solid #3a3f43;
+  border-radius: 6px;
+  background: #1c1f21;
+  color: var(--white);
+  font: inherit;
+  font-size: 16px;
+}
+.search input::placeholder { color: #a3a8ab; }
+
+.search-results {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: var(--white);
+  color: var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+.search-results a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.search-results a:hover,
+.search-results a:focus-visible { background: var(--chalk); outline-offset: -3px; }
+.search-results .thumb { width: 44px; height: 44px; flex: none; }
+.search-results .result-name { font-weight: 650; line-height: 1.25; }
+.search-results .result-meta { color: var(--hide); font-size: 14px; }
+.search-empty { padding: 10px 14px; color: var(--hide); }
+
+/* ---------- Status messages ---------- */
+
+#app { flex: 1; }
+#app:focus { outline: none; }
+
+.status,
+.message {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 64px var(--gutter);
+  color: var(--hide);
+}
+.message h1 { color: var(--ink); font-size: 2rem; margin-bottom: 12px; }
+
+/* ---------- Hero (home page) ---------- */
+
+.hero {
+  background-color: var(--black);
+  /* Dark fade over the photo keeps the white text readable on any picture.
+     If hero.jpg is not there yet, only the dark colour shows. */
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.45) 60%, rgba(0, 0, 0, 0.3) 100%),
+    url("/static/assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+.hero-inner {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: clamp(80px, 16vh, 180px) var(--gutter) clamp(64px, 12vh, 140px);
+  min-height: min(78vh, 760px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 9.5vw, 8.5rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+}
+.hero h1 span { display: block; }
+.hero p {
+  margin-top: 28px;
+  max-width: 34ch;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.4;
+  color: #e4e6e3;
+}
+
+/* ---------- Sections and cards ---------- */
+
+/* padding-block = top and bottom only, so the side padding from .wrap is kept */
+.section { padding-block: 64px 8px; }
+.section:last-child { padding-bottom: 72px; }
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 22px;
+}
+.section-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); }
+.section-head a { font-weight: 600; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--hide);
+  color: var(--white);
+  text-decoration: none;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card::after { /* dark fade at the bottom, under the text */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 35%, rgba(0, 0, 0, 0.1) 75%);
+}
+.card-text {
+  position: absolute;
+  z-index: 1;
+  left: 18px; right: 18px; bottom: 16px;
+}
+.card-caption { font-size: 15px; color: #d9dcd8; }
+.card-title {
+  font-size: 1.55rem;
+  font-weight: 850;
+  font-variation-settings: "wdth" 115;
+  line-height: 1.08;
+}
+.card:hover .card-title { text-decoration: underline; text-underline-offset: 4px; }
+
+.badge {
+  position: absolute;
+  z-index: 1;
+  top: 14px; left: 14px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--caution);
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.badge.inline { position: static; display: inline-block; margin-left: 8px; vertical-align: middle; }
+
+/* Small tiles for exercises without a guide (category page) */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.25;
+}
+.tile:hover { background: #e6e8e4; }
+.thumb {
+  width: 56px;
+  height: 56px;
+  flex: none;
+  border-radius: 6px;
+  object-fit: cover;
+  background: var(--hide);
+}
+
+.more {
+  display: block;
+  margin: 28px auto 0;
+  padding: 12px 28px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+.more:hover { background: var(--ink); color: var(--white); }
+
+.page-head { padding-block: 56px 8px; }
+.page-head h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); font-weight: 900; }
+.page-head p { margin-top: 10px; color: var(--hide); }
+
+/* ---------- Exercise page ---------- */
+
+.ex-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: end;
+  padding-block: 48px 32px;
+}
+.ex-top.no-photo { grid-template-columns: minmax(0, 1fr); }
+.ex-photo {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--hide);
+}
+.ex-photo img { width: 100%; height: 100%; object-fit: contain; background: var(--white); }
+.ex-strip { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.ex-strip button {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+}
+.ex-strip button[aria-pressed="true"] { border-color: var(--ink); }
+.ex-strip img { width: 64px; height: 64px; object-fit: cover; border-radius: 4px; }
+
+.ex-category { font-weight: 600; }
+.ex-head h1 {
+  margin-top: 6px;
+  font-size: clamp(2.4rem, 5.5vw, 4.6rem);
+  font-weight: 900;
+}
+.ex-alias { margin-top: 10px; color: var(--hide); }
+
+.notice {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-left: 4px solid var(--hide);
+  background: var(--white);
+  max-width: 62ch;
+}
+.notice.draft { border-left-color: var(--caution); }
+.notice strong { font-weight: 700; }
+
+.ex-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 48px;
+  padding-bottom: 80px;
+}
+.ex-main > section + section,
+.ex-side > section + section { margin-top: 44px; }
+.ex-body h2 { font-size: 1.7rem; margin-bottom: 14px; }
+.ex-main p,
+.ex-main li { max-width: 66ch; }
+.ex-main .prose p + p { margin-top: 12px; }
+
+.ex-side section {
+  padding: 22px;
+  border-radius: var(--radius);
+  background: var(--white);
+}
+.ex-side h2 { font-size: 1.3rem; }
+.ex-side h3 {
+  margin: 14px 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+  font-variation-settings: "wdth" 100;
+  color: var(--hide);
+}
+.ex-side ul { margin: 0; padding-left: 18px; }
+.ex-side p + p { margin-top: 10px; }
+.quiet { color: var(--hide); }
+
+/* Steps: a real sequence, so big numbers in the margin */
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.steps li {
+  position: relative;
+  counter-increment: step;
+  padding: 14px 0 14px 64px;
+  border-top: 1px solid var(--line);
+}
+.steps li:last-child { border-bottom: 1px solid var(--line); }
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 6px;
+  font-size: 2.2rem;
+  font-weight: 900;
+  font-variation-settings: "wdth" 125;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.amount { display: block; color: var(--hide); font-size: 15px; }
+
+.mistakes { margin: 0; padding: 0; list-style: none; }
+.mistakes li {
+  padding: 16px 18px;
+  border-radius: 8px;
+  background: var(--white);
+}
+.mistakes li + li { margin-top: 10px; }
+.mistake { font-weight: 700; }
+.fix { margin-top: 4px; }
+.fix-label { font-weight: 700; color: var(--cobalt); }
+
+/* Form pictures are often infographics with text, so show them whole, never cropped */
+.form-pictures {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+.form-pictures img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: var(--cobalt);
+  color: var(--white);
+  font-weight: 650;
+  text-decoration: none;
+}
+.button:hover { background: #1733b8; }
+
+/* ---------- Routine page ---------- */
+
+.routine-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding-block: 24px 80px;
+}
+.routine {
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--white);
+}
+.routine h2 { font-size: 1.9rem; margin-bottom: 6px; }
+.routine .steps { margin-top: 18px; }
+.routine .source { margin-top: 18px; }
+
+/* ---------- Footer ---------- */
+
+.footer { background: var(--black); color: #c9ccc8; }
+.footer-inner {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 48px var(--gutter) 56px;
+  display: grid;
+  gap: 14px;
+  font-size: 15px;
+}
+.footer p { max-width: 75ch; }
+.footer a { color: var(--white); }
+.footer :focus-visible { outline-color: #8ea2ff; }
+.footer-warning {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 650;
+}
+
+/* ---------- Tablets and phones ---------- */
+
+@media (max-width: 960px) {
+  .ex-top,
+  .ex-body,
+  .routine-grid { grid-template-columns: 1fr; }
+  .ex-top { gap: 24px; }
+}
+
+@media (max-width: 760px) {
+  :root { --gutter: 16px; }
+
+  .topbar-inner { flex-wrap: wrap; min-height: 60px; }
+  .nav-toggle { display: block; margin-left: auto; }
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-bottom: 14px;
+  }
+  .topbar.nav-open .nav { display: flex; }
+  .menu-button { width: 100%; text-align: left; padding: 12px 0; }
+  .menu-panel {
+    position: static;
+    box-shadow: none;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  .search { margin: 8px 0 0; }
+  .search input { width: 100%; }
+  .search-results { position: static; width: 100%; max-width: none; margin-top: 8px; }
+
+  .cards { grid-template-columns: 1fr; }
+  .steps li { padding-left: 52px; }
+  .steps li::before { font-size: 1.9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}

@@ -2,10 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Exercise Form Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rhino</title>
+  <link rel="icon" href="data:,">
+  <meta name="description" content="Step-by-step exercise form guides, common mistakes and how to fix them, warmups and cooldowns.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
 </head>
 <body>
-  <h1>Exercise Form Guide</h1>
-  <p>Frontend placeholder.</p>
+  <a class="skip-link" href="#app">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/">Rhino</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+
+      <nav id="main-nav" class="nav" aria-label="Main">
+        <div class="menu">
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-exercises">Exercises</button>
+          <ul id="menu-exercises" class="menu-panel"></ul>
+        </div>
+        <div class="menu">
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-routines">Routines</button>
+          <ul id="menu-routines" class="menu-panel"></ul>
+        </div>
+        <div class="search" role="search">
+          <label class="visually-hidden" for="search-input">Search exercises</label>
+          <input id="search-input" type="search" placeholder="Search exercises" autocomplete="off"
+                 aria-controls="search-results" aria-describedby="search-hint">
+          <span id="search-hint" class="visually-hidden">Type at least 2 letters. Use the down arrow to move through results.</span>
+          <ul id="search-results" class="search-results" hidden></ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <p class="status">Loading…</p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-warning">
+        Rhino gives general guidance, not medical advice. If something hurts, stop and see a
+        doctor or physiotherapist.
+      </p>
+      <p>
+        Exercise names, categories, muscles, equipment and many photos come from
+        <a href="https://wger.de" target="_blank" rel="noopener">wger</a>, shared under the
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA licence</a>.
+        Each exercise page names its author. Form guides and routines name their sources on their own pages.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

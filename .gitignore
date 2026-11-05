@@ -6,3 +6,8 @@ data/*.sqlite3
 
 # Reference screenshots of another website: kept locally, not committed
 refrencnce_layout/
+
+# My own learning notes: kept on my computer, not on GitHub
+DECISIONS.md
+PROBLEMS.md
+NOTES.md

@@ -134,8 +134,6 @@ docs/screenshots/           pictures for this README
 - **Fresh files after every change.** Static files are sent with `Cache-Control: no-cache`,
   so the browser checks for a new version (a cheap `304 Not Modified` if nothing changed).
 
-Problems I hit while building this, and how I solved them, are in [PROBLEMS.md](PROBLEMS.md).
-
 ## Content status
 
 The form guides and routines are marked as **drafts** until I have checked each one

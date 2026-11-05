@@ -10,7 +10,7 @@ and running load_all, never through the website.
 
 from contextlib import contextmanager
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -31,6 +31,21 @@ app.mount("/images/form", StaticFiles(directory=FORM_IMAGES_DIR), name="form_ima
 app.mount("/images/main", StaticFiles(directory=MAIN_IMAGES_DIR), name="main_images")
 # The page's own files: styles.css, app.js, assets/ (hero photo).
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
+
+
+@app.middleware("http")
+async def check_before_reusing(request: Request, call_next):
+    """Tell the browser: you may keep my files, but ask me before using a saved copy.
+
+    Without this the browser guesses how long a saved styles.css is still good, and
+    can keep showing an old version after I edit it. "no-cache" does NOT mean
+    "don't save". It means "check first": if the file is unchanged the server
+    answers "304 Not Modified" (tiny, no download), otherwise the new file is sent.
+    """
+    response = await call_next(request)
+    if not request.url.path.startswith("/api"):  # the page, CSS, JS and pictures
+        response.headers["Cache-Control"] = "no-cache"
+    return response
 
 
 # ------------------------------------------------------------

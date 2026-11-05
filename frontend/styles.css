@@ -258,6 +258,10 @@ p { margin: 0; }
   color: #d9dbd7;    /* soft light grey: gentler than white on the dark photo */
   line-height: 0.92;
   letter-spacing: -0.01em;
+  /* Keeps the title on 3 lines (Form first. / Weight / second.), so the hero box,
+     and the part of the photo it shows, stays the same size as with the bold title.
+     em = the title's own font size, so this works at every screen width. */
+  max-width: 7em;
 }
 .hero h1 span { display: block; }
 .hero p {

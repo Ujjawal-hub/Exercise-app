@@ -259,6 +259,7 @@ p { margin: 0; }
   letter-spacing: -0.01em;
 }
 .hero h1 span { display: block; }
+.hero h1 span:first-child { font-weight: 600; } /* "Form first." a bit lighter than "Weight second." */
 .hero p {
   margin-top: 28px;
   max-width: 34ch;

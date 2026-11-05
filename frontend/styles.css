@@ -254,8 +254,8 @@ p { margin: 0; }
 }
 .hero h1 {
   font-size: clamp(2.6rem, 9.5vw, 8.5rem);
-  font-weight: 600;  /* lighter than the 900 used elsewhere */
-  color: #ecedea;    /* soft off-white: less harsh than pure white on the photo */
+  font-weight: 400;  /* regular weight: much lighter than the 900 used elsewhere */
+  color: #d9dbd7;    /* soft light grey: gentler than white on the dark photo */
   line-height: 0.92;
   letter-spacing: -0.01em;
 }

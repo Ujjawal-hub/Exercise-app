@@ -471,7 +471,7 @@ p { margin: 0; }
    a bit bigger than the 17px used everywhere else, because people read it closely.
    Only p and li, so the headings keep their own sizes. */
 .detail p,
-.detail li { font-size: 19px; }
+.detail li { font-size: 21px; }
 .quiet { color: var(--hide); }
 
 /* Steps: a real sequence, so big numbers in the margin */
@@ -501,8 +501,8 @@ p { margin: 0; }
 }
 /* Exercise page: smaller step numbers so they don't outshout the text.
    (Routine pages use .steps too, but are not inside .detail, so they keep big numbers.) */
-.detail .steps li { padding-left: 46px; }
-.detail .steps li::before { font-size: 1.5rem; top: 12px; }
+.detail .steps li { padding-left: 36px; }
+.detail .steps li::before { font-size: 20px; top: 18px; }
 .amount { display: block; color: var(--hide); font-size: 15px; }
 
 .mistakes { margin: 0; padding: 0; list-style: none; }
@@ -615,8 +615,8 @@ p { margin: 0; }
   .cards { grid-template-columns: 1fr; }
   .steps li { padding-left: 52px; }
   .steps li::before { font-size: 1.9rem; }
-  .detail .steps li { padding-left: 40px; }
-  .detail .steps li::before { font-size: 1.4rem; }
+  .detail .steps li { padding-left: 34px; }
+  .detail .steps li::before { font-size: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

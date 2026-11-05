@@ -301,11 +301,11 @@ async function exercisePage(isCurrent, exerciseId) {
   // --- Main column: the guide, or wger's description ---
   const main = el("div", "ex-main");
   if (guide) {
-    const setup = el("section");
+    const setup = el("section", "detail");
     setup.append(el("h2", null, "Setup"), el("p", null, guide.setup));
     main.append(setup);
 
-    const steps = el("section");
+    const steps = el("section", "detail");
     steps.append(el("h2", null, "How to do it"));
     const list = el("ol", "steps");
     guide.steps.forEach((text) => list.append(el("li", null, text)));
@@ -313,7 +313,7 @@ async function exercisePage(isCurrent, exerciseId) {
     main.append(steps);
 
     if (guide.mistakes.length) {
-      const mistakes = el("section");
+      const mistakes = el("section", "detail");
       mistakes.append(el("h2", null, "Common mistakes"));
       const mlist = el("ul", "mistakes");
       guide.mistakes.forEach((m) => {
@@ -368,7 +368,7 @@ async function exercisePage(isCurrent, exerciseId) {
 
   // --- Side column: muscles, equipment, sources and credits ---
   const side = el("aside", "ex-side");
-  const feel = el("section");
+  const feel = el("section", "detail");
   feel.append(el("h2", null, "What you should feel"));
   if (ex.muscles.primary.length || ex.muscles.secondary.length) {
     if (ex.muscles.primary.length) {

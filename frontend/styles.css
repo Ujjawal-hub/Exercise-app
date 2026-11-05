@@ -484,7 +484,14 @@ p { margin: 0; }
   letter-spacing: 0.08em;
   text-transform: uppercase;        /* small grey capitals = a label */
 }
-.ex-side .detail p { font-size: 18px; line-height: 1.4; margin-bottom: 14px; }
+.ex-side .detail p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  /* Same font (Archivo), a little of the heading style: medium weight, slightly wide. */
+  font-weight: 500;
+  font-variation-settings: "wdth" 112;
+}
 .ex-side .detail p:last-child { margin-bottom: 0; }
 .quiet { color: var(--hide); }
 

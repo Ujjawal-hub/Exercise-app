@@ -139,6 +139,10 @@ def page():
 
 @app.get("/health")
 def health():
+    # Opening the database and running a tiny query makes the deployment health
+    # check catch a missing or unreadable catalogue instead of reporting a false OK.
+    with open_db() as conn:
+        conn.execute("SELECT 1 FROM exercises LIMIT 1").fetchone()
     return {"status": "ok"}
 
 

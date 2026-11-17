@@ -77,6 +77,24 @@ On macOS or Linux, use `.venv/bin/python` instead of `.venv\Scripts\python`.
 After editing anything in `data/`, run `load_all` again. All loaders are safe to run
 again and again: they update what is there and never create duplicates.
 
+## Deploy on Render
+
+The repository includes a `render.yaml` Blueprint for one-click deployment. It:
+
+- installs the Python dependencies;
+- downloads the wger catalogue and builds `data/app.db` during the build;
+- loads the hand-written guides, routines, and local pictures;
+- starts FastAPI on Render's assigned port and checks `/health`.
+
+Push the repository to GitHub, then open
+[Render's New Blueprint page](https://dashboard.render.com/blueprints), connect the
+repository, and apply the Blueprint. The service will deploy in the Singapore region
+on the free plan and automatically redeploy after commits to the connected branch.
+
+The database is generated during each deployment and the public API is read-only, so
+this app does not need a persistent disk. If write features are added later, move the
+database to persistent storage before deploying them.
+
 ## Project structure
 
 ```

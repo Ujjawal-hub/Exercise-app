@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: rhino-exercise-guide
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: pip install -r requirements.txt && python -m backend.app.ingest_wger && python -m backend.app.load_all
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeployTrigger: commit

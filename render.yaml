@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: rhino-exercise-guide
+    name: rhino
     runtime: python
     plan: free
     region: singapore
